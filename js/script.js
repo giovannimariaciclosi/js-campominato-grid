@@ -16,3 +16,80 @@ Di cosa ho bisogno per generare i numeri?
 Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 */
+
+
+/*
+PSEUDOCODICE
+
+- Assegno variabile e event listener al bottone play
+- Assegno una variabile al numero di celle da generare
+- Assegno una variabile all'elemento html grid container
+- Creo una funzione createSquare che genera un elemento "div" con del testo all'interno e gli assegna una classe "square"
+- Nell'event listener del bottone play creo un ciclo for che va da 1 a 100
+- Nel ciclo for assegno una variabile nuovo elemento alla funzione createSquare e la appendo al grid container
+- Aggiungo un event listener a questa variabile che al click fa aggiungere una classe ai quadrati
+- Aggiungo il console log che stampa, al click di un quadrato, il suo inner text
+
+
+
+
+*/
+
+// prendo l'elemento play button e gli assegno una variabile
+let playButtonEl = document.getElementById("play-button");
+// console.log(playButtonEl);
+
+// prendo l'elemento grid container e gli assegno una variabile
+let gridContainerEl = document.getElementById("grid-container");
+
+// creo una variabile per il numero di celle da generare (che forse potrebbe servirmi per i bonus)
+let cellNumber;
+
+//aggiungo l'event listener al click del play button
+playButtonEl.addEventListener("click", function() {
+
+  // faccio un ciclo for che va da 1 a 100
+  for (let i = 1; i <= 100; i++) {
+
+    // assegno una variabile nuovo elemento alla funzione createSquare
+    let newSquareEl = createSquare(i);
+
+    // aggiunto un event listener alla variabile nuovo elemento
+    newSquareEl.addEventListener("click", function() {
+
+      // al click del quadrato
+      // aggiungo la classe light blue per cambiare il background color
+      newSquareEl.classList.add("light-blue");
+      // stampo in console l'inner text del quadrato
+      console.log(newSquareEl.innerText);
+      
+    });
+    
+    // appendo i nuovi elementi a grid container
+    gridContainerEl.append(newSquareEl);
+  }
+
+});
+
+
+
+// _________________________________________________________________________________
+
+// FUNZIONI
+
+/**
+ * Fnzione che genera un elemento "div", gli assegna una classe "square" e inserisce al suo interno una stringa = al parametro "text" assegnato alla funzione
+ * @param {any} text
+ * @returns {any}
+ */
+function createSquare(text) {
+
+  // creare un elemento
+  // dargli una classe
+  let newElement = document.createElement('div');
+  newElement.classList.add("square");
+
+  newElement.innerText = text;
+
+  return newElement;
+}

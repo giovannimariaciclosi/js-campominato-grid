@@ -47,7 +47,26 @@ main {
 
 #grid-container {
   margin: 0 auto;
-  padding: 3em 0;
+  padding: 5em 0;
+
+  width: calc(70px * 10);
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  height: 70px;
+  width: 70px;
+  border: 1px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light-blue {
+  background-color: lightblue;
 }
 /* /main */
 
