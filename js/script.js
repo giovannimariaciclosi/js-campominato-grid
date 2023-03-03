@@ -70,6 +70,8 @@ let difficutlySelectorEl = document.getElementById("difficulty-selector");
 //aggiungo l'event listener al click del play button
 playButtonEl.addEventListener("click", function() {
 
+  gridContainerEl.innerText = "";
+
   // se il valore dell'elemento diffulty selector è = easy
   if (difficutlySelectorEl.value == "easy") {
 
