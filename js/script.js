@@ -89,9 +89,13 @@ playButtonEl.addEventListener("click", function() {
         console.log(newSquareEl.innerText);
   
       });
+
+      // cambio il display di grid container da none a flex
+      gridContainerEl.style.display = "flex";
       
       // appendo i nuovi elementi a grid container
       gridContainerEl.append(newSquareEl);
+
     }
   
     // se il valore dell'elemento diffulty selector è = medium
@@ -113,7 +117,10 @@ playButtonEl.addEventListener("click", function() {
         console.log(newSquareEl.innerText);
     
       });
-        
+      
+      // cambio il display di grid container da none a flex
+      gridContainerEl.style.display = "flex";
+
       // appendo i nuovi elementi a grid container
       gridContainerEl.append(newSquareEl);
     }
@@ -137,6 +144,9 @@ playButtonEl.addEventListener("click", function() {
         console.log(newSquareEl.innerText);
     
       });
+
+      // cambio il display di grid container da none a flex
+      gridContainerEl.style.display = "flex";
         
       // appendo i nuovi elementi a grid container
       gridContainerEl.append(newSquareEl);

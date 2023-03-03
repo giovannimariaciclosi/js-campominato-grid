@@ -61,7 +61,7 @@ main {
   width: 700px;
   height: 700px;
 
-  display: flex;
+  display: none;
   flex-wrap: wrap;
 }
 
