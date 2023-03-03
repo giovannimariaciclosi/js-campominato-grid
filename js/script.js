@@ -31,6 +31,8 @@ PSEUDOCODICE
 - Aggiungo il console log che stampa, al click di un quadrato, il suo inner text
 
 
+BONUS
+- prendo l'elemento html difficulty selector
 
 
 */
@@ -45,30 +47,94 @@ let gridContainerEl = document.getElementById("grid-container");
 // creo una variabile per il numero di celle da generare (che forse potrebbe servirmi per i bonus)
 let cellNumber;
 
+
+//bonus test
+
+// prendo l'elemento diffculty selector e gli assegno una variabile
+let difficutlySelectorEl = document.getElementById("difficulty-selector");
+
+// provo a comprendere come funziona il select / option di html
+// console.log(difficutlySelectorEl);
+// difficutlySelectorEl.addEventListener("click", function() {
+//   console.log(difficutlySelectorEl.value);
+// });
+
+
 //aggiungo l'event listener al click del play button
 playButtonEl.addEventListener("click", function() {
 
-  // faccio un ciclo for che va da 1 a 100
-  for (let i = 1; i <= 100; i++) {
+  // se il valore dell'elemento diffulty selector è = easy
+  if (difficutlySelectorEl.value == "easy") {
 
-    // assegno una variabile nuovo elemento alla funzione createSquare
-    let newSquareEl = createSquare(i);
-
-    // aggiunto un event listener alla variabile nuovo elemento
-    newSquareEl.addEventListener("click", function() {
-
-      // al click del quadrato
-      // aggiungo la classe light blue per cambiare il background color
-      newSquareEl.classList.add("light-blue");
-      // stampo in console l'inner text del quadrato
-      console.log(newSquareEl.innerText);
-      
-    });
+    // faccio un ciclo for che va da 1 a 100
+    for (let i = 1; i <= 100; i++) {
+  
+      // assegno una variabile nuovo elemento alla funzione createSquare
+      let newSquareEl = createSquare(i);
     
-    // appendo i nuovi elementi a grid container
-    gridContainerEl.append(newSquareEl);
-  }
+      // aggiunto un event listener alla variabile nuovo elemento
+      newSquareEl.addEventListener("click", function() {
+    
+        // al click del quadrato
+        // aggiungo la classe light blue per cambiare il background color
+        newSquareEl.classList.add("light-blue");
+        // stampo in console l'inner text del quadrato
+        console.log(newSquareEl.innerText);
+  
+      });
+      
+      // appendo i nuovi elementi a grid container
+      gridContainerEl.append(newSquareEl);
+    }
+  
+    // se il valore dell'elemento diffulty selector è = medium
+  } else if (difficutlySelectorEl.value == "medium") {
 
+    // faccio un ciclo for che va da 1 a 81
+    for (let i = 1; i <= 81; i++) {
+    
+      // assegno una variabile nuovo elemento alla funzione createSquare
+      let newSquareEl = createSquare(i);
+    
+      // aggiunto un event listener alla variabile nuovo elemento
+      newSquareEl.addEventListener("click", function() {
+    
+        // al click del quadrato
+        // aggiungo la classe light blue per cambiare il background color
+        newSquareEl.classList.add("light-blue");
+        // stampo in console l'inner text del quadrato
+        console.log(newSquareEl.innerText);
+    
+      });
+        
+      // appendo i nuovi elementi a grid container
+      gridContainerEl.append(newSquareEl);
+    }
+
+    // se il valore dell'elemento diffulty selector è = hard
+  } else if (difficutlySelectorEl.value == "hard") {
+
+    // faccio un ciclo for che va da 1 a 49
+    for (let i = 1; i <= 49; i++) {
+    
+      // assegno una variabile nuovo elemento alla funzione createSquare
+      let newSquareEl = createSquare(i);
+    
+      // aggiunto un event listener alla variabile nuovo elemento
+      newSquareEl.addEventListener("click", function() {
+    
+        // al click del quadrato
+        // aggiungo la classe light blue per cambiare il background color
+        newSquareEl.classList.add("light-blue");
+        // stampo in console l'inner text del quadrato
+        console.log(newSquareEl.innerText);
+    
+      });
+        
+      // appendo i nuovi elementi a grid container
+      gridContainerEl.append(newSquareEl);
+    }
+  }
 });
 
 
