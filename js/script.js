@@ -41,8 +41,15 @@ BONUS
 let playButtonEl = document.getElementById("play-button");
 // console.log(playButtonEl);
 
-// prendo l'elemento grid container e gli assegno una variabile
-let gridContainerEl = document.getElementById("grid-container");
+// prendo l'elemento grid container easy e gli assegno una variabile
+let gridContainerEasyEl = document.getElementById("grid-container-easy");
+
+// prendo l'elemento grid container medium e gli assegno una variabile
+let gridContainerMediumEl = document.getElementById("grid-container-medium");
+
+// prendo l'elemento grid container hard e gli assegno una variabile
+let gridContainerHardEl = document.getElementById("grid-container-hard");
+
 
 // creo una variabile per il numero di celle da generare (che forse potrebbe servirmi per i bonus)
 let cellNumber;
@@ -83,8 +90,8 @@ playButtonEl.addEventListener("click", function() {
   
       });
       
-      // appendo i nuovi elementi a grid container
-      gridContainerEl.append(newSquareEl);
+      // appendo i nuovi elementi a grid container easy
+      gridContainerEasyEl.append(newSquareEl);
     }
   
     // se il valore dell'elemento diffulty selector è = medium
@@ -107,8 +114,8 @@ playButtonEl.addEventListener("click", function() {
     
       });
         
-      // appendo i nuovi elementi a grid container
-      gridContainerEl.append(newSquareEl);
+      // appendo i nuovi elementi a grid container medium
+      gridContainerMediumEl.append(newSquareEl);
     }
 
     // se il valore dell'elemento diffulty selector è = hard
@@ -131,8 +138,8 @@ playButtonEl.addEventListener("click", function() {
     
       });
         
-      // appendo i nuovi elementi a grid container
-      gridContainerEl.append(newSquareEl);
+      // appendo i nuovi elementi a grid container hard
+      gridContainerHardEl.append(newSquareEl);
     }
   }
 });
